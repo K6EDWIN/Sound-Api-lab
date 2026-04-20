@@ -26,7 +26,7 @@ play.addEventListener('click', () => {
     audio.play();
     statusText.innerText = "Status: Playing";
 });
-
+//pause
 pause.addEventListener('click', () => {
     audio.pause();
     statusText.innerText = "Status: Paused";
