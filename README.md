@@ -1,7 +1,7 @@
 <h1 align="center">Sound Api lab: Web Audio Interface </h1>
 
 <p align="center">
-A sleek, web-based audio player built to demonstrate integration with the Web Audio API, featuring local file uploads and real-time playback manipulation. This repository serves as a practical sandbox for managing asynchronous file loading via <code>URL.createObjectURL</code> and implementing responsive UI controls for volume and speed.
+A sleek, web-based audio player built to demonstrate integration with the Web Audio API, featuring local file uploads and real-time playback manipulation. This repository serves as a practical sandbox for managing asynchronous file loading  and implementing responsive UI controls for volume and speed.
 </p>
 
 <hr>
