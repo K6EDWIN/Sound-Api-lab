@@ -25,8 +25,12 @@
     </div>
 
     <div class="sliders">
-        <label>Progress (<span id="currentTimeDisplay">0:00</span> / <span id="durationDisplay">0:00</span>)</label>
-        <input type="range" id="progressSlider" min="0" max="100" step="1" value="0" disabled>
+        <label class="centerlabel">Progress</label>
+        <div class="progress">
+            <span id="currentTimeDisplay">0:00</span>
+            <input type="range" id="progressSlider" min="0" max="100" step="1" value="0" disabled>
+            <span id="durationDisplay">0:00</span>
+        </div>
     </div>
 
     <div class="sliders">
