@@ -1,0 +1,104 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; 
+    margin: 0;
+}
+
+.player {
+    background: #1e1e1e; 
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5); 
+    width: 320px;
+    text-align: center;
+    color: #ffffff; 
+}
+
+.fileUpload {
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    display: none; 
+}
+
+.upload{
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #333333; 
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.upload:hover {
+    background-color: #444444;
+}
+
+.fileName {
+    font-size: 0.8rem;
+    color: #aaaaaa; 
+    margin-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; 
+    color: white;
+    font-weight: bold;
+    transition: background 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+button:disabled {
+    background-color: #3a3a3a; 
+    color: #777777;
+    cursor: not-allowed;
+}
+
+.sliders{
+    margin: 15px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 0.8rem;
+    color: #cccccc; 
+    margin-bottom: 5px;
+}
+
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    accent-color: #007bff; 
+}
+
+.status {
+    font-size: 0.9rem;
+    color: #e0e0e0; 
+    margin-top: 10px;
+    font-weight: bold;
+}

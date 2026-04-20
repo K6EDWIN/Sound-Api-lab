@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDIO INTERFACE</title>
+    <link rel="stylesheet" href="Webpage.css">
+    <script src="webpage.js" defer></script>
+</head>
+<body>
+
+<div class="player">
+    <h3>Player</h3>
+    <div class="fileUpload">
+        <label for="audioUpload" class="upload">Choose Audio File</label>
+        <input type="file" id="audioUpload" accept="audio/*">
+        <div id="fileName" class="fileName">No file selected</div>
+    </div>
+
+    <audio id="myAudio"></audio>
+
+    <div class="controls">
+        <button id="play" disabled>Play</button>
+        <button id="pause" disabled>Pause</button>
+    </div>
+
+    <div class="sliders">
+        <label>Volume</label>
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+    </div>
+
+    <div class="sliders">
+        <label>Playback Speed (<span id="speedVal">1.0</span>x)</label>
+        <input type="range" id="speedSlider" min="0.5" max="2" step="0.1" value="1">
+    </div>
+
+    <div class="status" id="status">Status: Waiting for file...</div>
+</div>
+</body>
+</html>
