@@ -5,6 +5,17 @@ const volumeSlider = document.getElementById('volumeSlider');
 const speedSlider = document.getElementById('speedSlider');
 const speedValText = document.getElementById('speedVal');
 const statusText = document.getElementById('status');
+const progressSlider = document.getElementById('progressSlider');
+const currentTimeDisplay = document.getElementById('currentTimeDisplay');
+const durationDisplay = document.getElementById('durationDisplay');
+
+// time format into minutes
+function formatTime(seconds) {
+    if (isNaN(seconds)) return "0:00";
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+}
 
 // file upload
 const audioUpload = document.getElementById('audioUpload');
@@ -18,7 +29,25 @@ audioUpload.addEventListener('change', (e) => {
         statusText.innerText = "Status: Ready to play";
         play.disabled = false;
         pause.disabled = false;
+        progressSlider.disabled = false; 
     }
+});
+
+// duration on play
+audio.addEventListener('loadedmetadata', () => {
+    progressSlider.max = audio.duration;
+    durationDisplay.innerText = formatTime(audio.duration);
+});
+
+// time display
+audio.addEventListener('timeupdate', () => {
+    progressSlider.value = audio.currentTime;
+    currentTimeDisplay.innerText = formatTime(audio.currentTime);
+});
+
+// Seek audio when sliding the progress bar
+progressSlider.addEventListener('input', (e) => {
+    audio.currentTime = e.target.value;
 });
 
 // playback
